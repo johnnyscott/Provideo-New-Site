@@ -1,0 +1,12 @@
+div.small-flipper-one{
+	width:200px;	
+	overflow:hidden;
+	background:#fff;
+	color:#646464;
+	padding:7px 11px;
+}
+div.small-flipper-one div.flipper-one div{
+	padding:9px 13px;
+	border-bottom: 1px solid #e3e3e3;
+	font-size:11px;
+}

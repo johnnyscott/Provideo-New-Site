@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+ html, body{
+ background: #dbdbdb;
+ margin:0px;
+ padding:0px;
+ }
+ 
+</style>
+<script>
+ var bSwitch = false;
+ function o(id){ return document.getElementById(id); }
+ function switchit(){
+  if(bSwitch){
+   o('images').src = 'old.jpg';
+  }else{
+   o('images').src = 'new.jpg';
+  }
+  
+  bSwitch = !bSwitch;
+ }
+</script>
+</head>
+<body>
+<div style="width:980px;margin-left:auto;margin-right:auto;position:absolute;"><img src="old.jpg" id="images" style="margin:0px;"/></div>
+<div onmouseup="switchit();" style="cursor:hand;background:yellow;color:black;padding:2px 4px;position:absolute;bottom:0px;left:0px;">
+ Switch!
+</div>
+</body>
+</html>
