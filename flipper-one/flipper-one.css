@@ -1,28 +1,54 @@
+body,html{
+  background:#dbdbdb;
+	font-family:Arial;	
+  padding:0px;
+  margin:0px;
+}
+
+a{padding:0px;margin:0px;}
+
+a img {
+  border:none;
+  margin:0px; 
+}
+
 div.small-flipper-one{
 	width:200px;	
-	overflow:visible;
 	background:#fff;
 	color:#646464;
 	padding:7px 11px;
+  position:absolute;
+  left:60px;
+  top:34px;
 }
-div.small-flipper-one div.flipper-one {
+
+div.small-flipper-one div.flipper-one-container{
+  position: relative;
+	overflow: hidden;
+  height:170px;
+}
+
+div.small-flipper-one div.flipper-one-container div.flipper-one {
+	padding:9px 13px;
+	font-size:11px;
+  height:2px;
+  position:relative;
+}
+
+div.small-flipper-one div.flipper-one-container div.flipper-one div{
 	padding:9px 13px;
 	border-bottom: 1px solid #e3e3e3;
 	font-size:11px;
-  border:1px solid blue;
 }
-div.small-flipper-one div.flipper-one div{
-	padding:9px 13px;
-	border-bottom: 1px solid #e3e3e3;
-	font-size:11px;
-}
+
 div.small-flipper-one div.pager {
  padding-top:11px;
+ padding-left:14px;
+ white-space:nowrap;
  text-align:center;
- background:blue;
 }
-div.small-flipper-one div.pager img{
+
+div.small-flipper-one div.pager a{
  padding-left:3px;
  padding-right:3px;
- white-space:nowrap;
 }
