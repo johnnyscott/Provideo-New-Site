@@ -98,15 +98,15 @@ var flipperOne = {
    var iEnd   = flipperOne.endIndex( flipperOne.iCurrentPage );  // get index of last item of current page
    for(var i = iEnd; i > iStart-1; i--){	
     var iDelayMultiplier = Math.abs(i-iEnd);
-      
-    // animate out and on last trigger animate in
+     
+    // animate out (on last trigger animate in)
     if( i == iStart ) { // LAST ITEM TRIGGERS FADE IN OF NEXT PAGE
       flipperOne.o().find("div:eq("+i+")").delay(
-        flipperOne.iFadeInOffsetMillis+(iDelayMultiplier * flipperOne.iFadeTimeOffsetMillis)
+        (iDelayMultiplier * flipperOne.iFadeTimeOffsetMillis)
           ).animate({
-             left: "+="+(3*flipperOne.iFadeOffset)+"px",
+             left: "+="+(2*flipperOne.iFadeOffset)+"px",
              opacity: 0.0
-          },'easein', function (){            
+          },'easeout', function (){            
             /* shift over item just moved*/         
             $(this).css('left',-flipperOne.iFadeOffset+"px");
                         
@@ -123,11 +123,15 @@ var flipperOne = {
                
               iHeight += flipperOne.o().find("div:eq("+i+")").height() +
                 parseInt(flipperOne.o().find("div:eq("+i+")").css('padding-top').replace('px','')) +
-                parseInt(flipperOne.o().find("div:eq("+i+")").css('padding-bottom').replace('px',''));
+                parseInt(flipperOne.o().find("div:eq("+i+")").css('padding-bottom').replace('px',''))+
+                parseInt(flipperOne.o().find("div:eq("+i+")").css('margin-top').replace('px','')) +
+                parseInt(flipperOne.o().find("div:eq("+i+")").css('margin-bottom').replace('px',''))+
+                parseInt(flipperOne.o().find("div:eq("+i+")").css('border-bottom-width').replace('px','')) +
+                parseInt(flipperOne.o().find("div:eq("+i+")").css('border-top-width').replace('px',''));
               
               // setup animation
               flipperOne.o().find("div:eq("+i+")").delay(
-                 flipperOne.iFadeInOffsetMillis+(i * flipperOne.iFadeTimeOffsetMillis)
+                 (Math.abs(i-iStartNew) * flipperOne.iFadeTimeOffsetMillis)
                 ).animate({
                    left: "+="+flipperOne.iFadeOffset+"px",
                    opacity: 1.0
@@ -139,11 +143,11 @@ var flipperOne = {
           });          
     } else {
       flipperOne.o().find("div:eq("+i+")").delay(
-           flipperOne.iFadeInOffsetMillis+(iDelayMultiplier * flipperOne.iFadeTimeOffsetMillis)
+           (iDelayMultiplier * flipperOne.iFadeTimeOffsetMillis)
           ).animate({
-             left: "+="+(3*flipperOne.iFadeOffset)+"px",
+             left: "+="+(2*flipperOne.iFadeOffset)+"px",
              opacity: 0.0
-            },'easein', function(){
+            },'easeout', function(){
              /* shift over item just moved*/
              $(this).css('left',-flipperOne.iFadeOffset+"px");
             });            
@@ -173,9 +177,13 @@ var flipperOne = {
 			// break after last item on 1st page
 			if(i > flipperOne.iDefaultItemsPerPage -1){ break; }else{/**/}
 			 
-			iHeight += flipperOne.o().find("div:eq("+i+")").height() +
-        parseInt(flipperOne.o().find("div:eq("+i+")").css('padding-top').replace('px','')) +
-        parseInt(flipperOne.o().find("div:eq("+i+")").css('padding-bottom').replace('px',''));
+      iHeight += flipperOne.o().find("div:eq("+i+")").height() +
+              parseInt(flipperOne.o().find("div:eq("+i+")").css('padding-top').replace('px','')) +
+              parseInt(flipperOne.o().find("div:eq("+i+")").css('padding-bottom').replace('px',''))+
+              parseInt(flipperOne.o().find("div:eq("+i+")").css('margin-top').replace('px','')) +
+              parseInt(flipperOne.o().find("div:eq("+i+")").css('margin-bottom').replace('px',''))+
+              parseInt(flipperOne.o().find("div:eq("+i+")").css('border-bottom-width').replace('px','')) +
+              parseInt(flipperOne.o().find("div:eq("+i+")").css('border-top-width').replace('px',''));
 			
 			// setup animation
 			flipperOne.o().find("div:eq("+i+")").delay(
