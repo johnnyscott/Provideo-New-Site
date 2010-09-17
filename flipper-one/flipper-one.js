@@ -8,7 +8,7 @@ var flipperOne = {
   iPagerImages : {onId: 'on', offId :'off', on:'page-on.gif',off:'page-off.gif',iWidth:8}, // images for pager
 	
 	iFadeOffset            : 70,  // fade in horizontal offset	(pixels)
-	iFadeInOffsetMillis    : 500,  // time offset for fade in 	
+	iFadeInOffsetMillis    : 110,  // time offset for fade in 	
 	iFadeTimeOffsetMillis  : 130,  // time betwen item fades
 	
 	bAutoPageChange        : true, // automatically change pages?
@@ -77,16 +77,82 @@ var flipperOne = {
   },
   
   
+  /* returns start index of given page */
+  startIndex : function(iPage){ return (iPage-1)*flipperOne.iDefaultItemsPerPage;},
+  /* returns end index of given page */
+  endIndex : function(iPage){ 
+    var iEnd = ((iPage-1)*flipperOne.iDefaultItemsPerPage) + (flipperOne.iDefaultItemsPerPage-1);
+    if( iEnd > flipperOne.o().children().length) { iEnd = flipperOne.o().children().length-1; } else {/**/}
+    return iEnd;
+  },
+  
+  
   
   /* shifts to page given */
   toPage : function(iPage){    
    // move current page indicator dot
    flipperOne.op().find('#'+flipperOne.iPagerImages.onId).css('left',flipperOne.pageOnOffset(iPage));
+
+   // fade out of current page items and fade in of new items
+   var iStart = flipperOne.startIndex( flipperOne.iCurrentPage); // get index of 1st item of current page
+   var iEnd   = flipperOne.endIndex( flipperOne.iCurrentPage );  // get index of last item of current page
+   for(var i = iEnd; i > iStart-1; i--){	
+    var iDelayMultiplier = Math.abs(i-iEnd);
       
-   // calculate vertical pixel offset for target page and move it
-   var iSublistTop = -1*flipperOne.sublistTopOffset((iPage-1)*flipperOne.iDefaultItemsPerPage);
-   //flipperOne.o().css('top', iSublistTop + 'px');
-   
+    // animate out and on last trigger animate in
+    if( i == iStart ) { // LAST ITEM TRIGGERS FADE IN OF NEXT PAGE
+      flipperOne.o().find("div:eq("+i+")").delay(
+        flipperOne.iFadeInOffsetMillis+(iDelayMultiplier * flipperOne.iFadeTimeOffsetMillis)
+          ).animate({
+             left: "+="+(3*flipperOne.iFadeOffset)+"px",
+             opacity: 0.0
+          },'easein', function (){            
+            /* shift over item just moved*/         
+            $(this).css('left',-flipperOne.iFadeOffset+"px");
+                        
+            /* Do fade in of new page */     
+            // shift to top of new page
+            var iSublistTop = -1*flipperOne.sublistTopOffset((iPage-1)*flipperOne.iDefaultItemsPerPage);
+            flipperOne.o().css('top', iSublistTop + 'px');
+            
+            // Animate new page fade in
+            var iHeight = 0; 
+            var iStartNew = flipperOne.startIndex( iPage ); // get index of 1st item of current page
+            var iEndNew   = flipperOne.endIndex( iPage );  // get index of last item of current page
+            for(var i = iStartNew; i < iEndNew+1; i++){	
+               
+              iHeight += flipperOne.o().find("div:eq("+i+")").height() +
+                parseInt(flipperOne.o().find("div:eq("+i+")").css('padding-top').replace('px','')) +
+                parseInt(flipperOne.o().find("div:eq("+i+")").css('padding-bottom').replace('px',''));
+              
+              // setup animation
+              flipperOne.o().find("div:eq("+i+")").delay(
+                 flipperOne.iFadeInOffsetMillis+(i * flipperOne.iFadeTimeOffsetMillis)
+                ).animate({
+                   left: "+="+flipperOne.iFadeOffset+"px",
+                   opacity: 1.0
+                  },'easein');
+                     
+            }
+            flipperOne.setHeight(iHeight);
+            
+          });          
+    } else {
+      flipperOne.o().find("div:eq("+i+")").delay(
+           flipperOne.iFadeInOffsetMillis+(iDelayMultiplier * flipperOne.iFadeTimeOffsetMillis)
+          ).animate({
+             left: "+="+(3*flipperOne.iFadeOffset)+"px",
+             opacity: 0.0
+            },'easein', function(){
+             /* shift over item just moved*/
+             $(this).css('left',-flipperOne.iFadeOffset+"px");
+            });            
+      }
+    }
+    
+    // set current page
+    flipperOne.iCurrentPage = iPage;
+    
   },
   
   
@@ -99,7 +165,7 @@ var flipperOne = {
     // initial css hide all
 		flipperOne.o().children().css('position', 'relative');
 		flipperOne.o().children().css('left', -flipperOne.iFadeOffset + 'px');	
-		flipperOne.o().children().css({ 'opacity' : 0.71 });	
+		flipperOne.o().children().css({ 'opacity' : 0.0 });	
 
 		// Animate 1st page fade in
 		var iHeight = 0; 
@@ -116,7 +182,7 @@ var flipperOne = {
          flipperOne.iFadeInOffsetMillis+(i * flipperOne.iFadeTimeOffsetMillis)
         ).animate({
            left: "+="+flipperOne.iFadeOffset+"px",
-           opacity: .5
+           opacity: 1.0
           },'easein');
 						 
 		}
