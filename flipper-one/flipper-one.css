@@ -7,10 +7,23 @@ body,html{
 
 a{padding:0px;margin:0px;}
 
+img {
+ padding:0px;
+ margin:0px;
+ border:none;
+}
+
+a{
+ padding:0px;
+ margin:0px;
+}
+
 a img {
   border:none;
   margin:0px; 
 }
+
+
 
 div.small-flipper-one{
 	width:210px;	
@@ -18,8 +31,8 @@ div.small-flipper-one{
 	color:#646464;
 	padding:7px 11px;
   position:absolute;
-  left:60px;
-  top:34px;
+  left:20px;
+  top:24px;
 }
 
 div.small-flipper-one div.flipper-one-container{
@@ -27,6 +40,7 @@ div.small-flipper-one div.flipper-one-container{
 	overflow: hidden;
   padding:0px;
   margin:0px;
+  height:180px;
 }
 
 div.small-flipper-one div.flipper-one-container div.flipper-one {
@@ -43,14 +57,13 @@ div.small-flipper-one div.flipper-one-container div.flipper-one div{
 }
 
 div.small-flipper-one div.flipper-one-container div.flipper-one img{
-	width:20%;
-  height:20%;
+  width:45px;
+  height:62px;
   float:left;
   margin-right:11px;
 }
 div.small-flipper-one div.pager {
- padding-top:11px;
- padding-left:14px;
+
  white-space:nowrap;
  text-align:center;
 }
@@ -58,4 +71,18 @@ div.small-flipper-one div.pager {
 div.small-flipper-one div.pager a{
  padding-left:3px;
  padding-right:3px;
+}
+
+div.debug{
+background:black;
+color:white;
+white-space:nowrap;
+overflow:scroll;
+font-size:10px;
+font-family: monospace, courier-new;
+width:320px;
+height:520px;
+position:absolute;
+right:0px;
+display:none;
 }

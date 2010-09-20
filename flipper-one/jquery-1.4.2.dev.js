@@ -4614,6 +4614,7 @@ jQuery.extend({
 
 		name = name.replace(rdashAlpha, fcamelCase);
 
+		//flipperOne.trace( typeof name + '::' + name+"_"+value);
 		if ( set ) {
 			style[ name ] = value;
 		}
