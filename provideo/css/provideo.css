@@ -1,5 +1,278 @@
-html, body{
+*{
  margin:0px;
  padding:0px;
+}
+html, body{
  background:#dbdbdb;
+ font: 12px "Lucida Grande", "Lucida Sans Unicode", Lucida, Verdana, Arial, sans-serif;
+}
+
+
+h3{
+ font-size:16px;
+ color:#ff7e00;
+ font-weight:bold;
+ margin-bottom:11px;
+}
+
+div.container {
+ width: 960px;
+ padding-top:17px;
+ margin-left:auto;
+ margin-right:auto;
+}
+
+div.container div.header{}
+div.container div.logo{ 
+ float:left;
+}
+div.container div.logo img{}
+div.container div.header div.address{
+ text-align:right;
+ float:left;
+ position:relative;
+ left:417px;
+ top:-9px;
+}
+
+
+div.container div.topbar{
+ clear:left;
+}
+
+/* positioning */
+
+#menuLink {
+position: absolute;
+left: 79px;
+top: -5px;
+}
+
+div.container div.topbar div.navigation{
+height: 30px;
+}
+
+div.container div.topbar div.navigation ul {
+list-style: none;
+}
+
+div.container div.topbar div.navigation li {
+float: left;
+position: relative;
+font-size: 13px;
+font-weight:bold;
+}
+
+div.container div.topbar div.navigation li li {
+float: none;
+font-size: 12px;
+}
+
+div.container div.topbar div.navigation a {
+color: #323232;
+display: block;
+line-height: 20px;
+background: transparent;
+text-decoration: none;
+text-align: center;
+margin-right: 1px;
+white-space:nowrap;
+}
+
+div.container div.topbar div.navigation li li a {
+height: auto;
+background: none;
+border: 0;
+text-align: left;
+margin: 0;
+line-height: 24px;
+}
+
+#ddContainer {
+position: absolute;
+left: -10055px;
+}
+
+/* styles for each tab */
+div.container div.topbar div.navigation ul li#home {
+ width:67px;
+}
+div.container div.topbar div.navigation ul li#home a:hover{
+ color:#ff7e00;
+}
+
+
+div.container div.topbar div.navigation ul li#video-transfer {
+ width:130px;
+}
+div.container div.topbar div.navigation ul li#video-transfer a:hover{
+ color:#ff7e00;
+}
+
+
+div.container div.topbar div.navigation ul li#portfolio {
+ width:93px;
+}
+div.container div.topbar div.navigation ul li#portfolio a:hover{
+ color:#ff7e00;
+}
+
+
+div.container div.topbar div.navigation ul li#services {
+ width:94px;
+}
+div.container div.topbar div.navigation ul li#services a:hover{
+ color:#ff7e00;
+}
+
+
+div.container div.topbar div.navigation ul li#wedding {
+ width:96px;
+}
+div.container div.topbar div.navigation ul li#wedding a:hover{
+ color:#ff7e00;
+}
+
+
+div.container div.topbar div.navigation ul li#buy-photos {
+ width:109px;
+}
+div.container div.topbar div.navigation ul li#buy-photos  a:hover{
+ color:#ff7e00;
+}
+
+div.container div.topbar div.navigation ul li#contact-us {
+ width:122px;
+}
+div.container div.topbar div.navigation ul li#contact-us a:hover{
+ color:#ff7e00;
+}
+
+div.container div.topbar div.navigation ul li#search {}
+
+
+
+
+
+
+div.container div.topbar div.navigation li:hover #ddContainer {
+display: block;
+left: -55px;
+}
+div.container div.topbar div.navigation li #ddContainer ul#ddc1 li div{
+ position:absolute;
+ top:-1px;
+ left:165px;
+ width:354px;
+ height:250px;
+ padding-left:19px;
+}
+
+
+
+
+/* ooooooooooooooooo  styles for mini sub menus ooooooooooooooooo */
+div.container div.topbar div.navigation li #ddContainer ul#ddc1 li div {
+ font-weight:normal;
+ display:none;
+
+}
+div.container div.topbar div.navigation li #ddContainer ul#ddc1 li:hover div { 
+ display:block;
+}
+div.container div.topbar div.navigation li #ddContainer ul#ddc1 li div img.main{
+ float:right;
+ margin: 7px 11px;
+}
+div.container div.topbar div.navigation li #ddContainer ul#ddc1 li div a.more{
+  background:none;
+  display:block;
+  position:absolute;
+  top:230px;
+  left:-3px;
+}
+div.container div.topbar div.navigation li #ddContainer ul#ddc1 li div a.more img{
+ margin:0px;
+}
+
+
+div.container div.topbar div.navigation li:hover a {}
+
+/* styles for drop-down */
+#ddContainer {
+  background:  url(../img/menu-bg.png) 0 11px no-repeat;
+  padding: 11px 0 0;
+  line-height: 24px;
+  width: 563px;
+
+}
+
+#ddContainer h2 {
+  color: #232323;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 20px 25px 0;
+}
+
+#ddContainer  ul#ddc1{
+ margin-top:15px;
+ overflow:visible;
+} 
+#ddContainer  ul#ddc1 li{  
+  width:166px;
+  background:url(../img/item-inset-border.gif) 0px 26px repeat-x;
+}
+
+#ddContainer a {
+  font-weight: normal;
+  color: #777777;
+  text-decoration: underline;
+  padding-left: 17px;
+  display:block;
+  width:149px;
+  padding-bottom:3px;
+  padding-bottom:4px;
+  background: url(../img/arrow-yellow-right.gif) 153px 7px no-repeat;
+}
+
+#ddContainer a:hover {
+ background:white url(../img/arrow-yellow-right.gif) 153px 7px no-repeat;
+ color:#ff7e00;
+}
+
+div.container div.topbar div.navigation #ddc1, 
+div.container div.topbar div.navigation #ddc2, #ddc3, #ddc4 {
+float: left; 
+width: 210px;
+margin-left: 10px;
+}
+
+div.container div.topbar div.navigation #ddc1 {
+}
+
+#ddFooter {
+position: absolute;
+height: 50px;
+bottom: -55px;
+left: 0;
+width: 270px;
+padding: 5px 15px 0;
+background: url(../img/menu-bg.png) 0 100% no-repeat;
+font-size: 12px;
+text-transform: uppercase;
+width:600px;
+}
+
+#ddFooter a {
+line-height: 24px;
+width: 191px;
+margin-left: 660px;
+clear: both;
+text-align: right;
+padding-right: 10px;
+}
+
+/* content */
+#content {
+clear: both;
 }
