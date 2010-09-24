@@ -1,0 +1,89 @@
+
+
+
+img {
+ padding:0px;
+ margin:0px;
+ border:none;
+}
+
+a{
+ padding:0px;
+ margin:0px;
+}
+
+a img {
+  border:none;
+  margin:0px; 
+}
+
+
+div.vanilla-box div.heading{
+ color:transparent;
+ position:relative;
+ height:30px;
+ width:241px;
+ background: url(../img/order-dvds.gif) no-repeat;
+ cursor:pointer;
+}
+div.small-flipper-one{
+	width:218px;	
+	background:#fff;
+	color:#646464;
+	padding:7px 11px;
+  position:relative;
+  top:-3px;
+}
+
+div.small-flipper-one div.flipper-one-container{
+  position: relative;
+	overflow: hidden;
+  padding:0px;
+  margin:0px;
+  height:180px;
+}
+
+div.small-flipper-one div.flipper-one-container div.flipper-one {
+	font-size:11px;
+  height:2px;
+  position:relative;
+}
+
+div.small-flipper-one div.flipper-one-container div.flipper-one div{
+	padding:9px 13px;
+	border-bottom: 1px solid #e3e3e3;
+	font-size:11px;
+  overflow:hidden;  
+  cursor:pointer;
+}
+
+div.small-flipper-one div.flipper-one-container div.flipper-one img{
+  width:45px;
+  height:62px;
+  float:left;
+  margin-right:11px;
+}
+div.small-flipper-one div.pager {
+
+ white-space:nowrap;
+ text-align:center;
+}
+
+div.small-flipper-one div.pager a{
+ padding-left:3px;
+ padding-right:3px;
+}
+
+div.debug{
+background:black;
+color:white;
+white-space:nowrap;
+overflow:scroll;
+font-size:10px;
+font-family: monospace, courier-new;
+width:320px;
+height:520px;
+position:absolute;
+right:0px;
+display:none;
+}

@@ -32,7 +32,7 @@ div.container div.header div.address{
  text-align:right;
  float:left;
  position:relative;
- left:417px;
+ left:437px;
  top:-9px;
 }
 
@@ -159,6 +159,7 @@ div.container div.topbar div.navigation ul li#search {}
 div.container div.topbar div.navigation li:hover #ddContainer {
 display: block;
 left: -55px;
+z-index:11;
 }
 div.container div.topbar div.navigation li #ddContainer ul#ddc1 li div{
  position:absolute;
@@ -280,7 +281,11 @@ clear: both;
 
 
 div.container div.topbar div.navigation ul li#search{}
-div.container div.topbar div.navigation ul li#search div#search{}
+div.container div.topbar div.navigation ul li#search div#search{
+ position:relative;
+ top:-8px;
+ left:20px;
+}
 div.container div.topbar div.navigation ul li#search div#search div{
  background:#d2d2d2;
  border: 1px inset #f0f0ef;
@@ -297,9 +302,104 @@ div.container div.topbar div.navigation ul li#search div#search div input{
  font-style:italic;
 }
 div.container div.topbar div.navigation ul li#search div#search div a{
- background:red;
+ background:transparent url(../img/icon-mag-off.gif) 8px 4px no-repeat;
+ color:transparent;
+ display:block;
+ float:right;
+ width:31px;
+ height:28px;
  display:inline;
+ 
 }
-div.container div.topbar div.navigation ul li#search div#search div a img{
- background:green;
+div.container div.topbar div.navigation ul li#search div#search div a:hover{
+background: #dadada url(../img/icon-mag-on.gif) 8px 4px no-repeat;
+}
+
+
+/* oooooooooooooooooooo COLUMNS and below */
+div.container div.body {
+ width:954px;
+}
+div.container div.body div.left-column{
+ width:695px;
+ float:left;
+ background:transparent;
+}
+div.container div.body div.right-column{
+ width:241px;
+ float:right;
+ 
+}
+
+
+div.vanilla-box {
+ background:transparent;
+}
+div.vanilla-box div.top-border{
+ z-index:10;
+ background: white url(../img/edge-t.gif) repeat-x;;
+ width:auto;
+ height:10px;
+}
+div.vanilla-box div.top-border .left{
+ background: url(../img/corner-tl.gif) no-repeat;
+ width:5px;
+ height:5px;
+ display:block;
+ float:left;
+}
+div.vanilla-box div.top-border .right{
+ background: url(../img/corner-tr.gif) no-repeat;
+ width:5px;
+ height:5px;
+ display:block;
+ float:right;
+}
+div.vanilla-box div.bottom-border{
+ z-index:10;
+ background: white url(../img/edge-b.gif) 0px 5px repeat-x;
+ position:relative; top:-3px;
+ width:auto;
+ height:10px;
+}
+div.vanilla-box div.bottom-border .left{
+ background: url(../img/corner-bl.gif) no-repeat;
+ width:5px;
+ height:5px;
+ position:relative;
+ top:5px;
+ display:block;
+ float:left;
+}
+div.vanilla-box div.bottom-border .right{
+ background: url(../img/corner-br.gif)  no-repeat;
+ width:5px;
+ height:5px;
+ position:relative;
+ top:5px;
+ left:2px;
+ display:block;
+ float:right;
+}
+div.vanilla-box div.main{
+ background:white;
+ padding: 11px 17px;
+ overflow:hidden;
+}
+
+img.left-floater{
+ float:left;
+ margin-right: 11px;
+ margin-botom:  17px;
+}
+
+/* video box */
+div.movie {
+ position:relative;
+ z-index:10;
+ background:url(../img/dummy-vid.png) no-repeat;
+ width:720px;
+ height:358px;
+ padding-left:4px;
+ 
 }
