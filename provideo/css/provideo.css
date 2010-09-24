@@ -1,6 +1,7 @@
 *{
  margin:0px;
  padding:0px;
+ outline:none;
 }
 html, body{
  background:#dbdbdb;
@@ -275,4 +276,30 @@ padding-right: 10px;
 /* content */
 #content {
 clear: both;
+}
+
+
+div.container div.topbar div.navigation ul li#search{}
+div.container div.topbar div.navigation ul li#search div#search{}
+div.container div.topbar div.navigation ul li#search div#search div{
+ background:#d2d2d2;
+ border: 1px inset #f0f0ef;
+ width:221px;
+ white-space:nowrap;
+}
+div.container div.topbar div.navigation ul li#search div#search div input{
+ border:none;
+ background:transparent; 
+ width:173px;
+ height:30px;
+ padding-left:11px;
+ color:#555555;
+ font-style:italic;
+}
+div.container div.topbar div.navigation ul li#search div#search div a{
+ background:red;
+ display:inline;
+}
+div.container div.topbar div.navigation ul li#search div#search div a img{
+ background:green;
 }
