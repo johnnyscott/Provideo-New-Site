@@ -3,7 +3,7 @@
 */
 /* initialize flipper one object */
 var flipperOne = {
-	iDefaultItemsPerPage   : 3,    // items per page defaults to 4
+	iDefaultItemsPerPage   : 5,    // items per page defaults to 4
   
   iPagerImages : {onId: 'on', offId :'off', on:'img/page-on.gif',off:'img/page-off.gif',iWidth:8}, // images for pager
 	
@@ -14,7 +14,7 @@ var flipperOne = {
 	bAutoPageChange        : true, // automatically change pages?
 	bPauseAutoPageChange   : false, // should automatic change be delayed?
 	bInTransition          : false, // defines animation is in progress, prevents auto change
-	iPageChangeDelayMillis : 7000, // delay between automatic page change
+	iPageChangeDelayMillis : 11000, // delay between automatic page change
 	iLastPageChangeTime    : -1,    // unix time of last page change
   
   iPageCount             : 1,    // number of pages (at least 1 even if empty)

@@ -8,6 +8,16 @@ html, body{
  font: 12px "Lucida Grande", "Lucida Sans Unicode", Lucida, Verdana, Arial, sans-serif;
 }
 
+a {
+  font-weight: normal;
+  color: #777777;
+  text-decoration: none;
+}
+
+a:hover {
+ color:#ff7e00;
+}
+
 
 h3{
  font-size:16px;
@@ -320,6 +330,11 @@ background: #dadada url(../img/icon-mag-on.gif) 8px 4px no-repeat;
 div.container div.body {
  width:954px;
 }
+div.container div.body div.single-column{
+ width:auto;
+ float:left;
+ background:transparent;
+}
 div.container div.body div.left-column{
  width:695px;
  float:left;
@@ -390,7 +405,7 @@ div.vanilla-box div.main{
 img.left-floater{
  float:left;
  margin-right: 11px;
- margin-botom:  17px;
+ margin-bottom:  17px;
 }
 
 /* video box */
@@ -402,4 +417,32 @@ div.movie {
  height:358px;
  padding-left:4px;
  
+}
+
+/* portfolio */
+div.portfolio{
+ position:relative;
+ left:18px;
+ top:15px;
+ width:918px;
+}
+div.portfolio h4{
+ margin-bottom:13px;
+ font-size:15px;
+}
+
+div.item{
+ margin-bottom:11px;
+}
+div.column{
+ float:left;
+ width:273px;
+ margin-right:32px;
+}
+div.portfolio img{
+ border:1px solid #838383;
+ }
+div.portfolio span{
+display:block;
+margin-top:5px;
 }
