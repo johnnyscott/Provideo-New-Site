@@ -289,7 +289,7 @@ padding-right: 10px;
 clear: both;
 }
 
-
+/* SEARCH */
 div.container div.topbar div.navigation ul li#search{}
 div.container div.topbar div.navigation ul li#search div#search{
  position:relative;
@@ -310,11 +310,12 @@ div.container div.topbar div.navigation ul li#search div#search div input{
  padding-left:11px;
  color:#555555;
  font-style:italic;
+ margin:none;
+ clear:none;
 }
 div.container div.topbar div.navigation ul li#search div#search div a{
  background:transparent url(../img/icon-mag-off.gif) 8px 4px no-repeat;
  color:transparent;
- display:block;
  float:right;
  width:31px;
  height:28px;
