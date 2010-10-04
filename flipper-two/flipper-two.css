@@ -1,0 +1,34 @@
+*{
+ margin:0px;
+ padding:0px;
+}
+body,html{
+  background:#dbdbdb;
+	font-family:Arial;	 
+}
+img {
+ border:none;
+}
+
+a img {
+  border:none;
+}
+
+
+/* main container for flipper two */
+div.flipper-two{}
+
+/* Clips the flipper with rounded corners and a drop shadow */
+div.flipper-two div.overlay{}
+
+/* Display area for flipper two */
+div.flipper-two div.content{}
+div.flipper-two div.content div.one{}
+div.flipper-two div.content div.two{}
+
+/* Thumbnail container has markup*/
+div.flipper-two div.pages {}
+div.flipper-two div.pages div.item{}
+div.flipper-two div.pages div.item div.video-id{}
+div.flipper-two div.pages div.item div.markup{}
+div.flipper-two div.pages div.item div.thumb{}
