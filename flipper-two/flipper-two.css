@@ -16,19 +16,36 @@ a img {
 
 
 /* main container for flipper two */
-div.flipper-two{}
+div.flipper-two{
+ margin-left:auto;
+ margin-right:auto;
+ position:relative;
+ top:30px;
+ background:black;
+ width:  699px;
+ height: 306px;
+ overflow:hidden;
+}
 
 /* Clips the flipper with rounded corners and a drop shadow */
 div.flipper-two div.overlay{}
 
 /* Display area for flipper two */
 div.flipper-two div.content{}
-div.flipper-two div.content div.one{}
-div.flipper-two div.content div.two{}
+div.flipper-two div.content div.item{
+ position:absolute;
+}
 
 /* Thumbnail container has markup*/
-div.flipper-two div.pages {}
-div.flipper-two div.pages div.item{}
-div.flipper-two div.pages div.item div.video-id{}
-div.flipper-two div.pages div.item div.markup{}
-div.flipper-two div.pages div.item div.thumb{}
+div.flipper-two div.pages {
+ position:absolute;
+ left:544px;
+ background:green;
+ width:155px;
+  
+}
+div.flipper-two div.pages div.item{
+ position:absolute;
+ background:yellow;
+ height:102px;
+}
