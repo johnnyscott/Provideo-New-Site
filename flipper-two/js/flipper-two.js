@@ -23,7 +23,9 @@ var flipperTwo = {
 	
 	
 	/* ooo VIDEO STUFF  ooo */
-	iVideoPlayAttemptIntervalMillis : 405, // time between attempts to play a video used to wait for swf to load once
+	iVideoNowPlayingIndex : -1, // index of currently playing video must be kept up to date for anonymous onProgress event handler
+	fVideoFlipPercent : 94, // percent of video to play before video stop and flip to next slide
+	iVideoAddEventsAttemptIntervalMillis : 405, // time between attempts to attach event handlers to videos
 	iVideoWidth  : 544, 
 	iVideoHeight : 306,
 	sVideoReplaceIdPrefix : 'video-replace-', // prefix for ids of containers replaced with video embed
@@ -58,26 +60,59 @@ var flipperTwo = {
 	/* ooo FUNCTIONS ooo */
 
 	
+	/* advances to next slide after video plays specified percentage */
+    videoPlayingHandler: function(iElapsedTimeSeconds){
+	 if(flipperTwo.iVideoNowPlayingIndex == -1) {return;} else {/**/}
+	 var sNowPlayingId = flipperTwo.sVideoObjectIdPrefix + flipperTwo.iVideoNowPlayingIndex;
+	 var fPercentagePlayed = iElapsedTimeSeconds/document.getElementById(sNowPlayingId).api_getDuration();
+	 if(fPercentagePlayed*100 >= flipperTwo.fVideoFlipPercent){
+	    // pause the video, reset to start, and flip		
+		document.getElementById(sNowPlayingId).api_pause();
+		flipperTwo.flip();
+	 }else{ console.log('no stop yet:' + (fPercentagePlayed*100)); }
+	},
 	
 	
-	/* fired when embed completes for each video purpose for now is to simply autoplay if a video is 1st item */
-	onEmbedComplete : function(e){},
 	
 	
-	
+	/* loops through video set and attempts to add event handlers */
+	attachEventsToVideos: function(){
+	   
+	    var bAllEventsSet = true; // assume all events handlers are set successfully		
+		for(var aVid in flipperTwo.aVideoSet){			
+			if(flipperTwo.aVideoSet[aVid]['bEventsAdded'] === true){continue;}else{/**/} // skip video if it already has event handlers
+			var sVideoObjectId = flipperTwo.sVideoObjectIdPrefix + aVid;
+			// see if api_addEventListener is available
+			if(typeof document.getElementById(sVideoObjectId).api_addEventListener == 'function'){
+			 document.getElementById(sVideoObjectId).api_addEventListener("onProgress","flipperTwo.videoPlayingHandler");
+			} else { bAllEventsSet = false; } // at least one event wasn't set, so we need to try again after a delay
 			
+		}
+		if(!bAllEventsSet){ // if there was at least one video without event handerls set, we must try again
+			setTimeout('flipperTwo.attachEventsToVideos()', flipperTwo.iVideoAddEventsAttemptIntervalMillis);
+		} else {/**/}			
+	},
+	
+
+		
+	/* unused stub for video embed complete events */
+	onEmbedComplete : function(e){},
 	/* embeds videos */
 	embedVideos: function(){
 		// loop through video set and do an embed for each id
 		var i = 0;
 		for(var aVid in flipperTwo.aVideoSet){
-		 var iVideoId = flipperTwo.aVideoSet[aVid];
+		 // add no events field to video set element
+		 flipperTwo.aVideoSet[aVid]['bEventsAdded'] = false;
+		 var iVideoId = flipperTwo.aVideoSet[aVid]['video_id'];		 
 		 flipperTwo.aFlashVars['clip_id'] = iVideoId;
 		 flipperTwo.aAttributes.id = flipperTwo.sVideoObjectIdPrefix + i;
-		 // autoplay first item if it has a video embed
+		 // autoplay first item if it has a video embed also first item has on embed complete handler
+		 var oOnEmbedComplete = false; 
 		 if(1 == $('div.flipper-two div.content div.item:eq('+flipperTwo.iCurrentItem+') div#'+
 			flipperTwo.sVideoReplaceIdPrefix + i).length){
 			flipperTwo.aFlashVars['autoplay'] = 1;
+			flipperTwo.iVideoNowPlayingIndex = i;
 		 }else{
 			flipperTwo.aFlashVars['autoplay'] = 0;
 		 }
@@ -91,10 +126,14 @@ var flipperTwo = {
 						 flipperTwo.aFlashVars,
 						 flipperTwo.aParams, 
 						 flipperTwo.aAttributes,
-						 flipperTwo.onEmbedComplete);
+						 oOnEmbedComplete);
 		 
 		 i++;
 		}
+		
+		// add events to videos
+		setTimeout('flipperTwo.attachEventsToVideos()', flipperTwo.iVideoAddEventsAttemptIntervalMillis);
+		
 	},
 	
 
