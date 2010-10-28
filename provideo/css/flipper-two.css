@@ -1,0 +1,58 @@
+*{
+ margin:0px;
+ padding:0px;
+}
+img {
+ border:none;
+}
+
+a img {
+  border:none;
+}
+
+
+/* main container for flipper two */
+div.flipper-two{
+ margin-left:auto;
+ margin-right:auto;
+ position:relative;
+ top:0px;
+ z-index:0;
+ background:transparent;
+ width:  702px;
+ height: 306px;
+ overflow:hidden;
+}
+
+/* Clips the flipper with rounded corners and a drop shadow */
+div.flipper-two div.overlay{
+ background:transparent url(../img/overlay.png);
+ position:absolute;
+ left:0px;
+ top:0px;
+ z-index:102;
+ width:702px;
+ height:400px;
+}
+
+/* Display area for flipper two */
+div.flipper-two div.content{
+	background:black;
+}
+div.flipper-two div.content div.item{
+ position:absolute;
+}
+
+/* Thumbnail container has markup*/
+div.flipper-two div.pages {
+ position:absolute;
+ left:544px;
+ background:transparent;
+ width:155px;
+  
+}
+div.flipper-two div.pages div.item{
+ position:absolute;
+ background:transparent;
+ height:102px;
+}

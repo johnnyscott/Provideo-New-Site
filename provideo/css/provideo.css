@@ -5,7 +5,8 @@
 }
 html, body{
  background:#dbdbdb;
- font: 12px "Lucida Grande", "Lucida Sans Unicode", Lucida, Verdana, Arial, sans-serif;
+ font: 13px "Lucida Grande", "Lucida Sans Unicode", Lucida, Verdana, Arial, sans-serif;
+
 }
 
 a {
@@ -27,7 +28,7 @@ h3{
 }
 
 div.container {
- width: 960px;
+ width: 960px; 
  padding-top:17px;
  margin-left:auto;
  margin-right:auto;
@@ -294,7 +295,7 @@ div.container div.topbar div.navigation ul li#search{}
 div.container div.topbar div.navigation ul li#search div#search{
  position:relative;
  top:-8px;
- left:20px;
+ left:30px;
 }
 div.container div.topbar div.navigation ul li#search div#search div{
  background:#d2d2d2;
@@ -329,7 +330,7 @@ background: #dadada url(../img/icon-mag-on.gif) 8px 4px no-repeat;
 
 /* oooooooooooooooooooo COLUMNS and below */
 div.container div.body {
- width:954px;
+ width:963px;
 }
 div.container div.body div.single-column{
  width:auto;
@@ -337,19 +338,19 @@ div.container div.body div.single-column{
  background:transparent;
 }
 div.container div.body div.left-column{
- width:695px;
- float:left;
+ width:701px;
+ float:left; 
  background:transparent;
 }
 div.container div.body div.right-column{
  width:241px;
- float:right;
- 
+ float:right; 
 }
 
 
 div.vanilla-box {
  background:transparent;
+ margin-bottom:20px;
 }
 div.vanilla-box div.top-border{
  z-index:10;
@@ -405,8 +406,8 @@ div.vanilla-box div.main{
 
 img.left-floater{
  float:left;
- margin-right: 11px;
- margin-bottom:  17px;
+ margin-right: 18px;
+ margin-bottom:  12px;
 }
 
 /* video box */
