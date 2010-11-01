@@ -64,7 +64,11 @@ var flipperTwo = {
     videoPlayingHandler: function(iElapsedTimeSeconds){
 	 if(flipperTwo.iVideoNowPlayingIndex == -1) {return;} else {/**/}
 	 var sNowPlayingId = flipperTwo.sVideoObjectIdPrefix + flipperTwo.iVideoNowPlayingIndex;
-	 var fPercentagePlayed = iElapsedTimeSeconds/document.getElementById(sNowPlayingId).api_getDuration();
+	 var fPercentagePlayed = iElapsedTimeSeconds/document.getElementById(sNowPlayingId).api_getDuration(); 
+    
+    // mute on 0-2% have played
+    if(fPercentagePlayed*100 < 3){ document.getElementById(sNowPlayingId).api_setVolume(0); } else {}
+
 	 if(fPercentagePlayed*100 >= flipperTwo.fVideoFlipPercent){
 	    // pause the video, reset to start, and flip		
 		document.getElementById(sNowPlayingId).api_pause();
@@ -83,8 +87,8 @@ var flipperTwo = {
 			if(flipperTwo.aVideoSet[aVid]['bEventsAdded'] === true){continue;}else{/**/} // skip video if it already has event handlers
 			var sVideoObjectId = flipperTwo.sVideoObjectIdPrefix + aVid;
 			// see if api_addEventListener is available
-			if(typeof document.getElementById(sVideoObjectId).api_addEventListener == 'function'){
-			 document.getElementById(sVideoObjectId).api_addEventListener("onProgress","flipperTwo.videoPlayingHandler");
+			if(typeof document.getElementById(sVideoObjectId).api_addEventListener == 'function'){    
+			 document.getElementById(sVideoObjectId).api_addEventListener("onProgress","flipperTwo.videoPlayingHandler");    
 			} else { bAllEventsSet = false; } // at least one event wasn't set, so we need to try again after a delay
 			
 		}

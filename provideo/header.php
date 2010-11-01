@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
  <head>
-  <title>Pro Video Wedding Services</title>
+  <title>Pro Video Home</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">  
   <link rel="stylesheet" type="text/css" href="css/provideo.css" />  
   <link rel="stylesheet" type="text/css" href="css/flipper-one.css" />   
@@ -20,7 +20,7 @@
  <div class="container">
 
 	<div class="header">
-		<div class="logo"><a href="index.html"><img src="img/logo-reflect.gif" alt="Pro Video"/></a></div>
+		<div class="logo"><a href="index.php"><img src="img/logo-reflect.gif" alt="Pro Video"/></a></div>
 		<div class="address">
 			<div>600 1st Avenue NW &bull; Cedar Rapids, IA 52405</div>
 			<div>(319) 368 - 7779 &bull; (800) 234 - 7680 </div>
@@ -31,98 +31,98 @@
 	<div class="topbar">
     <div class="navigation" >
       <ul>
-        <li id="home"><a href="index.html">Home</a></li>
-        <li id="video-transfer"><a href="#">Video Transfer</a></li>
-        <li id="portfolio"><a href="portfolio.html">Portfolio</a></li>
+        <li id="home"><a href="index.php">Home</a></li>
+        <li id="video-transfer"><a href="video-transfer.php">Video Transfer</a></li>
+        <li id="portfolio"><a href="portfolio.php">Portfolio</a></li>
         <li id="services">
-          <a href="#">Services</a>
+          <a href="services-overview.php">Services</a>
           <div id="ddContainer">
             <img id="menuLink" src="img/menu-link.png" alt=" " />
             
             <ul id="ddc1">
               <li onmouseover="javascript:document.getElementById('hideme').style.display='none';" onmouseout="javascript:document.getElementById('hideme').style.display='none';">
-                <a href="#">Video Transfer</a>
+                <a href="video-transfer.php">Video Transfer</a>
                 <div >
-                  <a href="#" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
+                  <a href="video-transfer.php" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
                   <img class="main" src="img/sub-video-transfer.jpg" alt="Video Transfer"/>
                   <h3>Video Transfer Services</h3>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 </div>
                 <div style="display:block" id="hideme">
-                  <a href="#" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
+                  <a href="video-transfer.php" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
                   <img class="main" src="img/sub-video-transfer.jpg" alt="Video Transfer"/>
                   <h3>Video Transfer Services</h3>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 </div>
               </li>
-              <li><a href="#">Duplication</a>
+              <li><a href="duplication.php">Duplication</a>
                  <div style="top:-29px;">
-                  <a href="#" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
-                  <img class="main" src="img/sub-duplication.jpg" alt="Video Transfer"/>
+                  <a href="duplication.php" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
+                  <img class="main" src="img/sub-duplication.jpg" alt="Duplication"/>
                   <h3>Duplication</h3>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 </div>
               </li>
-              <li><a href="#">Corporate Video</a>
+              <li><a href="corporate-video.php">Corporate Video</a>
                <div style="top:-57px;">
-                  <a href="#" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
-                  <img class="main" src="img/sub-corp.jpg" alt="Video Transfer"/>
+                  <a href="corporate-video.php" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
+                  <img class="main" src="img/sub-corp.jpg" alt="Corporate Video"/>
                   <h3>Corporate Video</h3>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 </div>
               </li>      
-              <li><a href="#">Event Videography</a>
+              <li><a href="event-videography.php">Event Videography</a>
                 <div style="top:-85px;">
-                   <a href="#" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
-                  <img class="main" src="img/sub-event.jpg" alt="Video Transfer"/>
+                   <a href="event-videography.php" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
+                  <img class="main" src="img/sub-event.jpg" alt="Event Videography"/>
                   <h3>Event Videography</h3>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 </div>
               </li>    
-              <li><a href="wedding.html">Wedding</a>
+              <li><a href="wedding.php">Wedding</a>
                <div style="top:-113px;">
-                  <a href="wedding.html" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
-                  <img class="main" src="img/sub-wedding.jpg" alt="Video Transfer"/>
+                  <a href="wedding.php" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
+                  <img class="main" src="img/sub-wedding.jpg" alt="Wedding"/>
                   <h3>Wedding</h3>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 </div>
               </li>
-              <li><a href="#">Photography</a>
+              <li><a href="photography.php">Photography</a>
                <div style="top:-141px;">
-                  <a href="#" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
-                  <img class="main" src="img/sub-photography.jpg" alt="Video Transfer"/>
+                  <a href="photography.php" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
+                  <img class="main" src="img/sub-photography.jpg" alt="Photography"/>
                   <h3>Photography</h3>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 </div>
               </li>          
-              <li><a href="#">DJ Service</a>
+              <li><a href="dj-service.php">DJ Service</a>
                <div style="top:-169px;">
-                  <a href="#" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
-                  <img class="main" src="img/sub-dj.jpg" alt="Video Transfer"/>
+                  <a href="dj-service.php" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
+                  <img class="main" src="img/sub-dj.jpg" alt="DJ Service"/>
                   <h3>DJ Service</h3>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 </div>
               </li>
-              <li><a href="#">Equipment Rental</a>
+              <li><a href="equipment-rental.php">Equipment Rental</a>
                 <div style="top:-197px;">
-                  <a href="#" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
+                  <a href="equipment-rental.php" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
                   <img class="main" src="img/sub-equip.jpg" alt="Video Transfer"/>
                   <h3>Equipment Rental</h3>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 </div>
               </li>   
-              <li><a href="#">Web Development</a>
+              <li><a href="web-development.php">Web Development</a>
                <div style="top:-225px;">
-                  <a href="#" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
+                  <a href="web-development.php" class="more"><img src="img/button-more.gif" alt="More Info" /></a>
                   <img class="main" src="img/sub-web.jpg" alt="Video Transfer"/>
                   <h3>Web Development & Design</h3>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
@@ -135,14 +135,14 @@
             </div>
           </div>
         </li>
-        <li id="wedding"><a href="wedding.html">Wedding</a></li>
-        <li id="buy-photos"><a href="#">Buy Photos</a></li>
-        <li id="contact-us"><a href="#">Contact Us</a></li>
+        <li id="wedding"><a href="wedding.php">Wedding</a></li>
+        <li id="buy-photos"><a href="http://provideo.smugmug.com/">Buy Photos</a></li>
+        <li id="contact-us"><a href="contact-us.php">Contact Us</a></li>
         <li id="search">
           <div id="search">
             <div>
-			   <a href="#" >GO</a>
-              <input name="search" id="topbar-search" maxlength="128" title="Search for keywords" value="Search…" onclick="if(this.value=='Search…'){this.value='';this.style.fontStyle='normal';}" onblur="if(this.value==''){this.value='Search…';this.style.fontStyle = 'italic';}" type="text" />              
+			   <a href="search-results.php" >GO</a>
+              <input name="search" id="topbar-search" maxlength="128" title="Search for keywords" value="Search..." onclick="if(this.value=='Search...'){this.value='';this.style.fontStyle='normal';}" onblur="if(this.value==''){this.value='Search...';this.style.fontStyle = 'italic';}" type="text" />              
             </div>
           </div>
         </li>
@@ -150,22 +150,3 @@
     </div>
 		
 	</div>
-
-	<div class="body">
-	   <div class="single-column">
-		<img src="img/wedding-place-holder.jpg" alt="place holder for wedding tour" />
-       </div>
-
-	
-		
-	</div>
-
-  </div><!--container end-->
-<div style="display:none;"><img src="img/icon-mag-on.gif"/></div>
-
-   </body>
-</html>
-
-
-
-    

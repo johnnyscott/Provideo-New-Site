@@ -333,8 +333,9 @@ div.container div.body {
  width:963px;
 }
 div.container div.body div.single-column{
- width:auto;
- float:left;
+ width:963px;
+ margin-left:auto;
+ margin-right:auto; 
  background:transparent;
 }
 div.container div.body div.left-column{
@@ -352,6 +353,7 @@ div.vanilla-box {
  background:transparent;
  margin-bottom:20px;
 }
+
 div.vanilla-box div.top-border{
  z-index:10;
  background: white url(../img/edge-t.gif) repeat-x;;
@@ -403,6 +405,56 @@ div.vanilla-box div.main{
  padding: 11px 17px;
  overflow:hidden;
 }
+
+div.body div.dvd-bg div.main{
+ background:white url(../img/bg-dvd.png) 740px 10px no-repeat;
+}
+
+div.vanilla-box div.main div.three-column{
+ width:auto; 
+}
+
+div.vanilla-box div.main  img.separator {
+ float:none;
+ margin-top:30px;
+}
+div.vanilla-box div.main div.three-column div.column{
+ width:290px;
+}
+div.vanilla-box div.main div.three-column div.center{
+ width:390px; 
+}
+div.main img.title{
+   margin-top:21px;
+   margin-left:17px;
+   margin-bottom:14px;
+}
+
+div.vanilla-box div.main div.three-column div.column p strong.title{
+ display:block;
+ font-weight:bold;
+ color:black;
+ font-size:17px;
+ margin-bottom:8px;
+}
+
+div.vanilla-box div.main div.three-column div.column p.little {
+   font-size:13px;
+   line-height:19px;
+   color:black;
+}
+div.vanilla-box div.main div.three-column div.column p.big-left {
+  padding-left:30px;
+  margin-top:15px;
+}
+div.vanilla-box div.main div.three-column div.column p{
+ font-family: "Segoe UI", Helvetica, Arial;
+ font-size:18px;
+ line-height:24px;
+ color: #4e4e4e;
+ margin-left:0px; 
+}
+
 
 img.left-floater{
  float:left;
