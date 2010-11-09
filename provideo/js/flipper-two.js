@@ -101,6 +101,7 @@ var flipperTwo = {
 		
 	/* unused stub for video embed complete events */
 	onEmbedComplete : function(e){},
+   
 	/* embeds videos */
 	embedVideos: function(){
 		// loop through video set and do an embed for each id
@@ -188,8 +189,11 @@ var flipperTwo = {
 	
 	
 	/* initialization function */
-	flipperTwo: function(){
+	flipperTwo: function(autoFlip,thumbCount,thumbHeight){
 	
+    if(autoFlip){flipperTwo.iFlipDelayMillis   = autoFlip;}else{}
+    if(thumbCount){flipperTwo.iDefaultItemsPerPage   = thumbCount;}else{}
+    if(thumbHeight){flipperTwo.iThumbHeight   = thumbHeight;}else{}
      /* ooo STACK THUMBS ooo */	
 	 // count items
 	 flipperTwo.iItemCount = parseInt($('div.flipper-two div.pages div.item').length);	 	 
@@ -213,7 +217,7 @@ var flipperTwo = {
 	 /* ooo Embed Videos ooo */
 	 flipperTwo.embedVideos();
 	 
-	 //setTimeout('flipperTwo.flip()',flipperTwo.iFlipDelayMillis);
+	 setTimeout('flipperTwo.flip()',flipperTwo.iFlipDelayMillis);
 	}
 	
 }

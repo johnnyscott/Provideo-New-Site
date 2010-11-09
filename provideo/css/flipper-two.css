@@ -12,6 +12,34 @@ a img {
 
 
 /* main container for flipper two */
+
+
+
+/* stuff for full length version */
+div#full-width{
+   background:green;
+   width:963px;
+   height:455px;
+}
+
+div#full-width div.pages {
+ position:absolute;
+ left:809px;
+ background:transparent;
+ width:155px;  
+}
+
+div#full-width div.pages div.item{
+ height:91px;
+}
+
+div.flipper-two img.title-ul{
+ position:absolute;
+ top:36px;
+ left:45px;
+ z-index:20000;
+}
+
 div.flipper-two{
  margin-left:auto;
  margin-right:auto;
