@@ -17,7 +17,7 @@ a img {
 
 /* stuff for full length version */
 div#full-width{
-   background:green;
+   background:#14152f;
    width:963px;
    height:455px;
 }
@@ -31,6 +31,24 @@ div#full-width div.pages {
 
 div#full-width div.pages div.item{
  height:91px;
+}
+div.flipper-two div.content div.item p{
+ font-family: Segoe UI, Segoe, helvetica, arial;
+ text-shadow: black 1px 1px 4px;
+ font-weight:lighter;
+ font-size:19px;
+ line-height:31px;
+ position:absolute;
+ top:116px;
+ width:700px;
+ left:50px;
+ z-index:22000;
+ color:white;
+}div.flipper-two div.content div.item p a{
+ color:white;
+ text-decoration:underline;
+}div.flipper-two div.content div.item p a:hover{
+ color:#ff6600;
 }
 
 div.flipper-two img.title-ul{
@@ -54,13 +72,13 @@ div.flipper-two{
 
 /* Clips the flipper with rounded corners and a drop shadow */
 div.flipper-two div.overlay{
- background:transparent url(../img/overlay.png);
+ background:transparent;/* url(../img/overlay.png);*/
  position:absolute;
  left:0px;
  top:0px;
- z-index:102;
+ z-index:102;/*
  width:702px;
- height:400px;
+ height:400px;*/
 }
 
 /* Display area for flipper two */

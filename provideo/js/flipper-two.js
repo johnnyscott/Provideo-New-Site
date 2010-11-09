@@ -217,7 +217,7 @@ var flipperTwo = {
 	 /* ooo Embed Videos ooo */
 	 flipperTwo.embedVideos();
 	 
-	 setTimeout('flipperTwo.flip()',flipperTwo.iFlipDelayMillis);
+	 setTimeout('flipperTwo.flip()',flipperTwo.iFlipDelayMillis*2);
 	}
 	
 }
